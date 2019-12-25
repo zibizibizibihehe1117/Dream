@@ -1,0 +1,444 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+ul,li{
+	list-style:none;
+}
+a{
+	text-decoration: none;
+	color: white;
+}
+body{
+	width: 100%;
+	height: 2710px;
+}
+.box{
+	width: 100%;
+	height: 810px;
+	margin-top: 0px;
+	position: relative;
+	background: url(images/p1.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	overflow: hidden;
+}
+/*导航栏+搜索框*/
+.box_top{
+	width: 100%;
+	height: 130px;
+	position: absolute;
+	margin-top: 0px;
+}
+.top_first{
+	width: 100%;
+	height: 60px;
+	background: url(images/p15.png);
+}
+.text{
+	width: 750px;
+	height: 60px;
+	float: left;
+	margin-left: 250px;
+}
+.word{
+	width: 150px;
+	height: 60px;
+	text-align: center;
+	float: left;
+	line-height: 60px;
+}
+.word:hover {
+	background: url(images/p4_1.jpg);
+	color: black;
+	background-repeat: no-repeat;
+}
+.input{
+	width: 400px;
+	height: 60px;
+	float: left;
+}
+.ti1{
+	width: 80px;
+	height: 60px;
+	margin-left: 200px;
+	float: left;
+}
+.word2{
+	width:60px;
+	height: 60px;
+	color: white;
+	line-height: 60px;
+	text-align: center;
+	float: left;
+}
+.word2_2:hover {
+	color: #8B0000;
+}
+.top_center{
+	width: 100%;
+	height: 90px;
+	margin-top: 0px;
+}
+.bt2{
+	width: 90px;
+	height: 80px;
+	margin-top: 0px;
+	float: left;
+	margin-left: 30px;
+}
+.top_center_right{
+	width: 1400px;
+	height: 80px;
+	margin-top: 10px;
+	float: left;
+}
+
+/*中间部分壁纸*/
+.box_center{
+	width: 1000px;
+	height: 500px;
+	position: absolute;
+	background: url(images/p2.jpg) no-repeat;
+	background-size: cover;
+	margin-left: 260px;
+	border-radius: 1%;
+	margin-top: 130px;
+	overflow: hidden;
+}
+.center_first{
+	width: 2000px;
+	height: 500px;
+	position: relative;
+}
+
+.bc1{
+	width: 1000px;
+	height: 500px;
+	opacity: 0.5;
+	overflow: hidden;
+	float: left;
+	left: 0px;
+	position: absolute;
+}
+.bc2{
+	width: 1000px;
+	height: 500px;
+	opacity: 0.5;
+	overflow: hidden;
+	float: left;
+	left: 1000px;
+	position: absolute;
+}
+/*划过出现时间线*/
+.timeline{
+	width: 1000px;
+	height: 300px;
+	margin-top: 200px;
+}
+.tangqing{
+	width: 1000px;
+	height: 100px;
+	float: left;
+}
+.tangh{
+	width: 100px;
+	height: 100px;
+	float: left;
+}
+.box{
+	position: relative;
+}
+.peo1{
+	width: 260px;
+	height: 600px;
+	background-image: url(images/tang.png);
+	background-size: cover;
+	position: absolute;
+	right: 0px;
+	top: 36px;
+}
+.peo2{
+	width: 260px;
+	height: 600px;
+	background-image: url(images/qing.png);
+	background-size: cover;
+	position: absolute;
+	left: 0px;
+	top: 36px;
+}
+.peo3{
+	width: 260px;
+	height: 600px;
+	background-image: url(images/song.png);
+	background-size: cover;
+	position: absolute;
+	right: 0px;
+	top: 36px;
+}
+.peo5{
+	width: 260px;
+	height: 600px;
+	background-image: url(images/tang.png);
+	background-size: cover;
+	position: absolute;
+	left: 0px;
+	top: 36px;
+}
+.peo4{
+	width: 260px;
+	height: 600px;
+	background-image: url(images/song.png);
+	background-size: cover;
+	position: absolute;
+	right: 0px;
+	top: 36px;
+}
+.qingh{
+	width: 100px;
+	height: 100px;
+	float: right;
+}
+
+.songming{
+	width: 1000px;
+	height: 100px;
+	float: left;
+}
+.songh{
+	width: 100px;
+	height: 100px;
+	margin-left: 225px;
+}
+
+.mingh{
+	width: 100px;
+	height: 100px;
+	margin-left: 335px;
+}
+
+.yuan{
+	width: 1000px;
+	height: 100px;
+	float: left;
+}
+.yuanh{
+	width: 100px;
+	height: 100px;
+	margin-left: 445px;
+}
+
+/*下部分*/
+.next{
+	height: 1980px;
+	width: 100%;
+	background-image: url(images/t.jpg);
+	background-size: cover;
+}
+.fir{
+	width: 100%;
+	height: 80px;
+}
+.f{
+	width: 100%;
+	height: 80px;
+}
+/*center*/
+.center{
+	width: 100%;
+	height: 1130px;
+	position: relative;
+}
+
+.people{
+	width: 400px;
+	height: 1230px;
+	position: absolute;
+	overflow: hidden;
+	left: 0px;
+	top: 200px;
+}
+.next{
+	position: relative;
+}
+.photo{
+	width: 1100px;
+	height: 1000px;
+	left: 400px;
+	top: 10px;
+	position: absolute;
+	overflow: hidden;
+}
+.photo{
+	position: relative;
+}
+.po{
+	width: 300px;
+	height: 300px;
+	top: 0px;
+	right: 0px;
+	position: absolute;
+}
+.po1{
+	width: 300px;
+	height: 300px;
+	float: left;
+}
+.hre1{
+	width: 200px;
+	height: 600px;
+	left: 0px;
+	top: 150px;
+	position: absolute;
+	background-image: url(images/tangm.jpg);
+	background-size: cover;
+}
+.hre1:hover {
+	width: 200px;
+	height: 600px;
+	opacity: 0.5;
+	background-size: cover;
+}
+.hre2{
+	width: 200px;
+	height: 600px;
+	left: 215px;
+	top: 200px;
+	position: absolute;
+	background-image: url(images/songm.jpg);
+	background-size: cover;
+}
+.hre2:hover {
+	width: 200px;
+	height: 600px;
+	opacity: 0.5;
+	background-size: cover;
+}
+
+.hre3{
+	width: 200px;
+	height: 600px;
+	top: 250px;
+	left: 430px;
+	position: absolute;
+	background-image: url(images/yuanm.jpg);
+	background-size: cover;
+}
+.hre3:hover {
+	width: 200px;
+	height: 600px;
+	opacity: 0.5;
+	background-size: cover;
+}
+.hre4{
+	width: 200px;
+	height: 600px;
+	top: 300px;
+	left: 645px;
+	position: absolute;
+	background-image: url(images/mingm.jpg);
+	background-size: cover;
+}
+.hre4:hover {
+	width: 200px;
+	height: 600px;
+	opacity: 0.5;
+	background-size: cover;
+}
+.hre5{
+	width: 200px;
+	height: 600px;
+	top: 350px;
+	left: 860px;
+	position: absolute;
+	background-image: url(images/qingm.jpg);
+	background-size: cover;
+}
+.hre5:hover {
+	width: 200px;
+	height: 600px;
+	opacity: 0.5;
+	background-size: cover;
+}
+.p{
+	width: 200px;
+	height: 600px;
+	display: block;
+	color: rgba(0,0,0,0);
+	position: relative;
+}
+.p:hover {
+	color:white;
+	background-color: rgba(0,0,0,0.5);
+}
+.word4{
+	position: absolute;
+	width: 200px;
+	text-align: center;
+	height: 80px;
+	top: 50px;
+	font-family: 华文楷体;
+	font-size: 50px;
+}
+.word5{
+	position: absolute;
+	width: 180px;
+	height: 450px;
+	top: 150px;
+	left: 10px;
+	font-family: 华文楷体;
+	font-size: 15px;
+}
+/*底部说明*/
+.bottom{
+	width: 100%;
+	height: 850px;
+	background-image: url(images/p3.png);
+	background-size: cover;
+	position: relative;
+	text-align: center;
+}
+
+.bottom_first{
+	width: 100%;
+	height: 10px;
+	position: absolute;
+	font-size: 12px;
+	float: left;
+	margin: 550px auto;
+}
+.word3{
+	color:#FF6347;
+	text-align: center;
+}
+.word3:hover {
+	color:#8B0000;
+}
+.bottom_last{
+	width: 100%;
+	height: 10px;
+	font-size: 12px;
+	position: absolute;
+	float: left;
+	color:#FF6347;
+	margin: 570px auto;
+}
+.bottom_f{
+	width: 100%;
+	height: 10px;
+	position: absolute;
+	float: left;
+	margin: 590px auto;
+	font-size: 12px;
+	color: #FF6347;
+}
+.bottom_l{
+	width: 100%;
+	height: 10px;
+	position: absolute;
+	float: left;
+	margin: 610px auto;
+	font-size: 12px;
+	color: #FF6347;
+}
+
