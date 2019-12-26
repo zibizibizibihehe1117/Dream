@@ -1,0 +1,225 @@
+*{
+		padding: 0px;
+		margin: 0px;
+}
+ul,li{
+  list-style:none;
+}
+li{
+  text-align:center;
+}
+a{
+			text-decoration: none;
+			color: white;
+}
+.top{
+			background:url(gao-images/top.png) no-repeat;
+			width:100%;
+			height:60px;
+}
+.text{
+			width: 750px;
+			height: 60px;
+			float: left;
+			margin-left: 250px;
+}
+.word{
+			width: 150px;
+			height: 60px;
+			font-size: 16px;
+			text-align: center;
+			float: left;
+			line-height: 60px;
+}
+.word:hover {
+			background: url(gao-images/p4_1.jpg) no-repeat;
+			color:black;
+}
+.center{
+			width:100%;
+			height:2000px;
+			background:url(gao-images/new.png);
+}
+.artword{
+			float:left;
+}
+.dynasty{
+    		font-family: "LiSu", Courier;
+    		font-size: 150px;
+    		color: #fff;
+    		text-shadow:0 0 20px #fefcc9, 
+    					0px -15px 50px #cd4606, 
+    					10px -10px 30px #feec85,
+    					-20px -20px 40px #ffae34,
+    					20px -40px 50px #ec760c,
+    					0 -40px 70px #973716, 
+    					10px -90px 80px #451b0e;
+    		-webkit-box-reflect: below 5px -webkit-linear-gradient(transparent,transparent 25%,rgba(255,255,255,0.7));
+}
+.dynasty_1{
+    		font-family: "LiSu", Courier;
+    		font-size: 100px;
+    		color: #fff;
+    		text-shadow:0 0 20px #fefcc9, 
+    					0px -15px 50px #cd4606, 
+    					10px -10px 30px #feec85,
+    					-20px -20px 40px #ffae34,
+    					20px -40px 50px #ec760c,
+    					0 -40px 70px #973716, 
+    					10px -90px 80px #451b0e;
+  			
+}
+.introtext{
+  			width:100%;
+  			height:800px;
+  			position:relative;
+  			top:160px;
+}
+.img_1{
+  			position:relative;
+  			top:-75px;
+  			left:-60px;
+  			background:url(gao-images/bg1.png);
+  			width:950px;
+  			height:700px;
+}
+.introtext_1{
+  			position:relative;
+  			left:180px;
+  			top:-70px;
+  			width:300px;
+  			height:60px;
+}
+.introtext_1>div{
+  			line-height:80px;
+        font-family: 'Kaiti';
+        font-size: 1.5em;
+}
+.introtext_1>div>a{
+  			color:black;
+}
+#intro{
+  			position:absolute;
+  			top:130px;
+  			left:900px;
+  			width:330px;
+  			height:600px;
+  			border:10px dotted rgba(200,200,200,0.7);
+  			background:url(gao-images/bg_2.jpg);
+  			overflow:hidden;
+}
+#intro_1{
+  			width:320px;
+  			height:680px;
+}
+#intro_1>p{
+  			line-height:40px;
+  			font-family:"Kaiti";
+  			font-size:1.3em;
+  			text-indent: 2em;
+}
+#box_1{
+			width:1150px;
+			height:450px;
+            border: 10px ridge rgba(225,226,250,.7);
+			position:relative;
+  			top:550px;
+  			left:125px;
+			overflow:hidden;
+}
+#change,#con2{
+            float:left;
+            margin-left:10px;
+}        
+#innerdiv {
+            float: left;
+            width: 800%;
+}  
+.box_bottom{
+			width: 100%;
+			height: 60px;
+			background-image: url(gao-images/bottom.jpg);
+			opacity: 0.7;
+			background-size: cover;
+			float: left;
+}
+
+.bottom_first{
+			width: 400px;
+			height: 10px;
+			margin-top: 10px;
+			font-size: 15px;
+			margin-left: 460px;
+}
+.word3{
+			color:#8B0000;
+}
+.bottom_last{
+			font-size: 15px;
+			margin-top: 12px;
+			color:#8B0000;
+			margin-left: 427px;
+}
+
+
+#tuijian{
+  width:420px;
+  position:relative;
+  top:600px;
+  left:200px;
+  height:400px;
+  overflow:hidden;
+} 
+.slider{
+  width:2940px;
+  position:absolute;
+  left:-420px;
+}
+.slide{
+  width:420px;
+  overflow:hidden;
+  float:left;
+}
+.tuijian>span{
+  display:block;
+  width:30px;
+  height:50px;
+  text-align: center;
+  cursor:pointer;
+  color:;
+  top:175px;
+  line-height: 50px;
+  background:rgb(255,0,0);
+  font-size:30px;
+  position:absolute;
+  opacity:0;
+}
+#left{
+  position:relative;
+  left:40px;
+  top:200px;
+}
+#right{
+  position:relative;
+  right:-345px;
+  top:200px;
+}
+.nav{
+  position:absolute;
+  left:62px;
+  bottom:20px;
+}
+.nav>li{
+  float:left;
+  width:20px;
+  height:20px;
+  background:#ccc;
+  opacity: 0.5;
+  cursor:pointer;
+  margin:0 15px;
+  border-radius:50%;
+}
+.nav .action{
+  background:pink;
+}
+

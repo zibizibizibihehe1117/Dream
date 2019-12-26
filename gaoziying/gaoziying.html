@@ -1,0 +1,145 @@
+<!DOCTYPE .html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />          
+        <meta name="keywords" content="关键字1,关键字2" />        
+        <meta name="Description" content="描述信息" />
+		<title>Tang Dynasty</title>
+		<link rel="stylesheet" href="gaostyle.css">
+		<!-- <script src="animate.js"></script> -->
+		<script type="text/javascript">
+		window.onload=function(){
+			//图片横向循环滚动
+			var area =document.getElementById('box_1');
+            var change = document.getElementById('change');
+            var con2 = document.getElementById('con2');
+            var span = document.getElementsByTagName('span');
+            con2.innerHTML=change.innerHTML;
+            area.scrollLeft=5;                 
+            function scrollUp(){
+            if(area.scrollLeft>=con2.offsetWidth){
+                area.scrollLeft=5;
+            }else{
+                area.scrollLeft+=5;
+                }
+            }                
+            var time = 50;
+            var mytimer=setInterval(scrollUp,time);
+            area.onmouseover = function (){
+                clearInterval(mytimer);
+            }
+            area.onmouseout = function (){
+                mytimer=setInterval(scrollUp,time);
+            }
+            var time1 = document.getElementById('time1');
+            time1.onclick = function(){
+            	var a = window.prompt("对‘618——李渊建唐’了解程度： 1（很了解），2（一般）3（只听说）",'');
+            	if(a==3||a==2){
+            		return window.confirm("可复制以下页面进行学习：https://www.baidu.com/s?tn=80035161_2_dg&wd=%E5%A4%A9%E5%AE%9D%E5%8D%B1%E6%9C%BA%EF%BC%8C%E5%AE%89%E5%8F%B2%E4%B9%8B%E4%B9%B1%EF%BC%8C%E8%97%A9%E9%95%87%E5%89%B2%E6%8D%AE");
+            	}
+            }
+            var time2 = document.getElementById('time2');
+            time2.onclick=function(){
+            	window.confirm("贞观之治——唐太宗李世民继位；移都洛阳——唐太宗李世民下令修葺洛阳城，号称洛阳宫；高宗时期——李治即位，承继贞观之治，国力鼎盛，史称永徽之治；武周代唐——武则天即位改国号为周，即武周，定都洛阳（号称神都）；开元之治");
+            }
+            var time3 = document.getElementById('time3');
+            time3.onclick=function(){
+            	var a = window.prompt("对‘天宝危机，安史之乱，藩镇割据’了解程度： 1（很了解），2（一般）3（只听说）",'');
+            	if(a==3||a==2){
+            		return window.confirm("可复制以下页面进行学习：https://www.baidu.com/s?tn=80035161_2_dg&wd=%E5%A4%A9%E5%AE%9D%E5%8D%B1%E6%9C%BA%EF%BC%8C%E5%AE%89%E5%8F%B2%E4%B9%8B%E4%B9%B1%EF%BC%8C%E8%97%A9%E9%95%87%E5%89%B2%E6%8D%AE");
+            	}
+            }
+            var time4 = document.getElementById('time4');
+            time4.onclick=function(){
+            	var a = window.prompt("对‘德宗改制，永贞革新，藩镇叛乱’了解程度： 1（很了解），2（一般）3（只听说）",'');
+            	if(a==3||a==2){
+            		return window.confirm("可复制以下页面进行学习：https://www.baidu.com/s?tn=80035161_2_dg&wd=%E5%A4%A9%E5%AE%9D%E5%8D%B1%E6%9C%BA%EF%BC%8C%E5%AE%89%E5%8F%B2%E4%B9%8B%E4%B9%B1%EF%BC%8C%E8%97%A9%E9%95%87%E5%89%B2%E6%8D%AE");
+            	}
+            }
+            var time5 = document.getElementById('time5');
+            time5.onclick=function(){
+            	var a = window.prompt("对‘内乱频繁，甘露之变，会昌中兴，牛李党争，大中暂治’了解程度： 1（很了解），2（一般）3（只听说）",'');
+            	if(a==3||a==2){
+            		return window.confirm("可复制以下页面进行学习：https://www.baidu.com/s?tn=80035161_2_dg&wd=%E5%A4%A9%E5%AE%9D%E5%8D%B1%E6%9C%BA%EF%BC%8C%E5%AE%89%E5%8F%B2%E4%B9%8B%E4%B9%B1%EF%BC%8C%E8%97%A9%E9%95%87%E5%89%B2%E6%8D%AE");
+            	}
+            }
+            var time6 = document.getElementById('time6');
+            time6.onclick=function(){
+            	var a = window.prompt("对‘黄巢之乱，藩镇之争，朱温篡唐’了解程度： 1（很了解），2（一般）3（只听说）",'');
+            	if(a==3||a==2){
+            		return window.confirm("可复制以下页面进行学习：https://www.baidu.com/s?tn=80035161_2_dg&wd=%E5%A4%A9%E5%AE%9D%E5%8D%B1%E6%9C%BA%EF%BC%8C%E5%AE%89%E5%8F%B2%E4%B9%8B%E4%B9%B1%EF%BC%8C%E8%97%A9%E9%95%87%E5%89%B2%E6%8D%AE");
+            	}
+            }
+        }
+		</script>
+	</head>
+	<body>
+		<div class="box">
+			<div class="top">
+				<div class="text">
+					<a href="" class="word" id="word">|&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp官方首页&nbsp&nbsp&nbsp&nbsp</a>
+					<a href="" class="word" id="word">|&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp盛世绘卷&nbsp&nbsp&nbsp&nbsp</a>
+					<a href="" class="word" id="word">|&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp藏宝阁&nbsp&nbsp&nbsp&nbsp</a>
+					<a href="" class="word" id="word">|&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp周边商城&nbsp&nbsp&nbsp&nbsp</a>
+					<a href="" class="word" id="word">|&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp产品简介&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|</a>
+				</div>
+			</div>
+			<div class="center">				
+				<div class="artword">
+					<span class="dynasty">唐朝 </span>
+					<span class="dynasty_1">618-907</span>  
+				</div>
+				<div id="intro" style="overflow-y:scroll;">
+					<div id="intro_1">
+					<p>隋末天下群雄并起，617年唐国公李渊于晋阳起兵，次年称帝建立唐朝，以长安为京师。 658年置东都洛阳 ，后又陆续增置北都太原，南京成都、凤翔等都城。唐太宗继位后开创贞观之治，为盛唐奠定基础。唐高宗承贞观遗风开创“永徽之治”。690年，武则天改国号为周, 705年神龙革命后，恢复唐国号。 唐玄宗即位后缔造全盛的开元盛世，天宝末全国人口达八千万左右。  安史之乱后藩镇割据、宦官专权导致国力渐衰；中后期经唐宪宗元和中兴、唐武宗会昌中兴、唐宣宗大中之治国势复振。878年爆发黄巢起义破坏了唐朝统治根基，907年朱温篡唐，唐朝覆亡。</p><!-- <a name="ref_[12]_1143928" class="sup-anchor"></a> -->
+					<p>唐朝时万国来朝达到鼎盛，向其朝贡之国多达三百余。疆域空前辽阔，极盛时东起日本海、南据安南、西抵咸海、北逾贝加尔湖，是中国自秦以来第一个未修据胡长城的大一统王朝。唐朝攻灭东突厥、薛延陀后，唐太宗被四夷各族尊为天可汗 。又借羁縻制度征调突厥、回鹘、铁勒、契丹、靺鞨、室韦等民族攻伐敌国，并让日本、南诏、新罗、渤海国等藩属国学习自身的文化与制度。唐朝接纳各国交流学习，经济、社会、文化、艺术呈现出多元化、开放性等特点，诗、书、画、乐等方面涌现出大量名家，如诗仙李白、诗圣杜甫、诗魔白居易，书法家颜真卿，画圣吴道子，音乐家李龟年等。
+					<p>唐朝是当时世界上最强盛的国家之一，声誉远播，与亚欧国家均有往来。唐以后海外多称中国人为“唐人”。</p>
+					</div>
+				</div>
+				<div class="introtext">
+					<div class="img_1">
+						<div class="introtext_1">
+							<div id="time1" ><a href="">618年 大唐开国</a>
+							</div>
+							<div id="time2"><a href="">唐初盛世</a></div>
+							<div id="time3"><a href="" >由盛转衰</a></div>
+							<div id="time4"><a href="">中唐时期</a></div>
+							<div id="time5"><a href="">晚唐时期</a></div>
+							<div id="time6"><a href="">走向灭亡</a></div>
+						</div>
+						<div id="box_1">
+						<div id="innerdiv">
+							<div id="change">
+								<span class="i1"><img src="gao-images/liyuan_1.png"></span>
+								<span class="i2"><img src="gao-images/lishimin_2.png"></span>
+								<span calss="i3"><img src="gao-images/wuzetian_3.png"></span>
+								<span class="i4"><img src="gao-images/lilongji_4.png"></span>
+								<span class="i5"><img src="gao-images/liheng_5.png"></span>
+								<span class="i6"><img src="gao-images/lixuan_6.png"></span>
+								<span id="left"><</span>
+								<span id="right">></span>
+							</div>
+							<div id="con2"></div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				
+				<div id="tuijian">
+				</div>
+			</div>
+			<div class="box_bottom" id="box_bottom">
+				<div class="bottom_first">
+					<a href="" class="word3">梦回社区</a>
+					<a href="" class="word3">|&nbsp&nbsp&nbsp意见反馈</a>
+					<a href="" class="word3">|&nbsp&nbsp&nbsp常见问题</a>
+					<a href="" class="word3">|&nbsp&nbsp&nbsp联系我们</a>
+				</div>
+				<div class="bottom_last">
+					版权所有©2019 Fairy's studio 河北梦回信息技术有限公司
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
