@@ -6,7 +6,7 @@
         <meta name="Description" content="描述信息" />
 		<title>Tang Dynasty</title>
 		<link rel="stylesheet" href="gaostyle.css">
-		<!-- <script src="animate.js"></script> -->
+		 <!-- // <script src="animate.js"></script> -->
 		<script type="text/javascript">
 		window.onload=function(){
 			//图片横向循环滚动
@@ -70,17 +70,128 @@
             		return window.confirm("可复制以下页面进行学习：https://www.baidu.com/s?tn=80035161_2_dg&wd=%E5%A4%A9%E5%AE%9D%E5%8D%B1%E6%9C%BA%EF%BC%8C%E5%AE%89%E5%8F%B2%E4%B9%8B%E4%B9%B1%EF%BC%8C%E8%97%A9%E9%95%87%E5%89%B2%E6%8D%AE");
             	}
             }
-        }
+        
+
+        var box = document.getElementById('tuijian');
+		var oNavlist = document.getElementById('nav').children;
+		var slider = document.getElementById('slider');
+		var left = document.getElementById('left');
+		var right = document.getElementById('right');
+		var index = 1;
+		var isMoving = false;
+		//轮播下一张函数
+		function next(){
+			index++;
+			navChange();
+			animate(slider,{left:-420*index},function(){
+				if(index===6){
+					slider.style.left="-420px";
+					index=1;
+				}
+			});
+		}
+		//轮播上一张
+		function prev(){
+			index--;
+			animate(slider,{left:-420*index},function(){
+				if(index===0){
+					slider.style.left="-2100px";
+					index=5;
+				}
+			});
+		}
+		var timer = setInterval(next,3000);
+
+		//定时器
+		box.onmouseover = function(){
+			animate(left,{opacity:50});
+			animate(right,{opacity:50})
+			clearInterval(timer)
+		}
+		box.onmouseout = function(){
+			animate(left,{opacity:0})
+			animate(right,{opacity:0})
+			timer = setInterval(next,3000);
+		}
+		right.onclick = next;
+		left.onclick = prev;
+
+		//小按钮事件
+		for(var i=0;i<oNavlist.length;i++){
+			oNavlist[i].idx = i;
+			oNavlist[i].onclick = function(){
+				index = this.idx+1;
+				navChange();
+				animate(slider,{left:-420*index});
+			}
+		}
+
+		//按钮背景
+		function navChange(){
+			for(var i = 0;i<oNavlist.length;i++){
+				oNavlist[i].className = "";
+			}
+			if(index==6){
+				oNavlist[0].className = 'active'; 
+			}
+			else{
+			oNavlist[index-1].className = 'active';
+			}
+		}
+
+
+
+function getStyle(obj, attr){
+	if(obj.currentStyle){
+		return obj.currentStyle[attr];
+	} else {
+		return getComputedStyle(obj, null)[attr];
+	}
+}
+function animate(obj,json,callback){
+	clearInterval(obj.timer);
+	obj.timer = setInterval(function(){
+		var isStop = true;
+		for(var attr in json){
+			var now = 0;
+			if(attr == 'opacity'){
+				now = parseInt(getStyle(obj,attr)*100);
+			}else{
+				now = parseInt(getStyle(obj,attr));
+			}
+			var speed = (json[attr] - now) / 8;
+			speed = speed>0?Math.ceil(speed):Math.floor(speed);
+			var cur = now + speed;
+			if(attr == 'opacity'){
+				obj.style[attr] = cur / 100;
+			}else{
+				obj.style[attr] = cur + 'px';
+			}
+			if(json[attr] !== cur){
+				isStop = false;
+			}
+		}
+		if(isStop){
+			clearInterval(obj.timer);
+			callback&&callback();
+		}
+	}, 30)
+}
+		var ask = document.getElementById('ask');
+		var num = Math.ceil(Math.random()*5);
+		ask.innerHTML='<img src="gao-images/erweima_'+num+'.png">';
+}
+
 		</script>
 	</head>
 	<body>
 		<div class="box">
 			<div class="top">
 				<div class="text">
-					<a href="" class="word" id="word">|&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp官方首页&nbsp&nbsp&nbsp&nbsp</a>
+					<a href="../dujinni/index.html" class="word" id="word">|&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp官方首页&nbsp&nbsp&nbsp&nbsp</a>
 					<a href="" class="word" id="word">|&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp盛世绘卷&nbsp&nbsp&nbsp&nbsp</a>
-					<a href="" class="word" id="word">|&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp藏宝阁&nbsp&nbsp&nbsp&nbsp</a>
-					<a href="" class="word" id="word">|&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp周边商城&nbsp&nbsp&nbsp&nbsp</a>
+					<a href="../yangxiaoxuan/yangxiaoxuan.html" class="word" id="word">|&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp藏宝阁&nbsp&nbsp&nbsp&nbsp</a>
+					<a href="../lihang/lihang.html" class="word" id="word">|&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp周边商城&nbsp&nbsp&nbsp&nbsp</a>
 					<a href="" class="word" id="word">|&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp产品简介&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|</a>
 				</div>
 			</div>
@@ -89,17 +200,20 @@
 					<span class="dynasty">唐朝 </span>
 					<span class="dynasty_1">618-907</span>  
 				</div>
-				<div id="intro" style="overflow-y:scroll;">
+
+				<div id="intro"  style="overflow-y:scroll;">
 					<div id="intro_1">
-					<p>隋末天下群雄并起，617年唐国公李渊于晋阳起兵，次年称帝建立唐朝，以长安为京师。 658年置东都洛阳 ，后又陆续增置北都太原，南京成都、凤翔等都城。唐太宗继位后开创贞观之治，为盛唐奠定基础。唐高宗承贞观遗风开创“永徽之治”。690年，武则天改国号为周, 705年神龙革命后，恢复唐国号。 唐玄宗即位后缔造全盛的开元盛世，天宝末全国人口达八千万左右。  安史之乱后藩镇割据、宦官专权导致国力渐衰；中后期经唐宪宗元和中兴、唐武宗会昌中兴、唐宣宗大中之治国势复振。878年爆发黄巢起义破坏了唐朝统治根基，907年朱温篡唐，唐朝覆亡。</p><!-- <a name="ref_[12]_1143928" class="sup-anchor"></a> -->
+					<p>隋末天下群雄并起，617年唐国公李渊于晋阳起兵，次年称帝建立唐朝，以长安为京师。 658年置东都洛阳 ，后又陆续增置北都太原，南京成都、凤翔等都城。唐太宗继位后开创贞观之治，为盛唐奠定基础。唐高宗承贞观遗风开创“永徽之治”。690年，武则天改国号为周, 705年神龙革命后，恢复唐国号。 唐玄宗即位后缔造全盛的开元盛世，天宝末全国人口达八千万左右。  安史之乱后藩镇割据、宦官专权导致国力渐衰；中后期经唐宪宗元和中兴、唐武宗会昌中兴、唐宣宗大中之治国势复振。878年爆发黄巢起义破坏了唐朝统治根基，907年朱温篡唐，唐朝覆亡。</p>
 					<p>唐朝时万国来朝达到鼎盛，向其朝贡之国多达三百余。疆域空前辽阔，极盛时东起日本海、南据安南、西抵咸海、北逾贝加尔湖，是中国自秦以来第一个未修据胡长城的大一统王朝。唐朝攻灭东突厥、薛延陀后，唐太宗被四夷各族尊为天可汗 。又借羁縻制度征调突厥、回鹘、铁勒、契丹、靺鞨、室韦等民族攻伐敌国，并让日本、南诏、新罗、渤海国等藩属国学习自身的文化与制度。唐朝接纳各国交流学习，经济、社会、文化、艺术呈现出多元化、开放性等特点，诗、书、画、乐等方面涌现出大量名家，如诗仙李白、诗圣杜甫、诗魔白居易，书法家颜真卿，画圣吴道子，音乐家李龟年等。
 					<p>唐朝是当时世界上最强盛的国家之一，声誉远播，与亚欧国家均有往来。唐以后海外多称中国人为“唐人”。</p>
+
 					</div>
+
 				</div>
 				<div class="introtext">
 					<div class="img_1">
 						<div class="introtext_1">
-							<div id="time1" ><a href="">618年 大唐开国</a>
+							<div id="time1" style='height:10px'><a href="">618年 大唐开国</a>
 							</div>
 							<div id="time2"><a href="">唐初盛世</a></div>
 							<div id="time3"><a href="" >由盛转衰</a></div>
@@ -116,8 +230,6 @@
 								<span class="i4"><img src="gao-images/lilongji_4.png"></span>
 								<span class="i5"><img src="gao-images/liheng_5.png"></span>
 								<span class="i6"><img src="gao-images/lixuan_6.png"></span>
-								<span id="left"><</span>
-								<span id="right">></span>
 							</div>
 							<div id="con2"></div>
 							</div>
@@ -125,10 +237,32 @@
 
 					</div>
 				</div>
-				
-				<div id="tuijian">
+			<div id="tuijian">				
+				<div class="slider" id="slider">
+					<div class="slide"><img src="gao-images/tu_5.png" alt=""/></div>
+					<div class="slide"><img src="gao-images/tu_1.png" alt=""/></div>
+					<div class="slide"><img src="gao-images/tu_2.png" alt=""/></div>
+					<div class="slide"><img src="gao-images/tu_3.png" alt=""/></div>
+					<div class="slide"><img src="gao-images/tu_4.png" alt=""/></div>
+					<div class="slide"><img src="gao-images/tu_5.png" alt=""/></div>
+					<div class="slide"><img src="gao-images/tu_1.png" alt=""/></div>
 				</div>
+				<span id="left"><</span>
+				<span id="right">></span>
+				<ul class="nav" id="nav">
+						<li class="active">1</li>
+						<li>2</li>
+						<li>3</li>
+						<li>4</li>
+						<li>5</li>
+				</ul>
 			</div>
+			<p class="ask_1">
+				扫描下方二维码，可学习更多^-^
+			</p>
+			<div id="ask">
+			</div>	
+		</div>
 			<div class="box_bottom" id="box_bottom">
 				<div class="bottom_first">
 					<a href="" class="word3">梦回社区</a>
